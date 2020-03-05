@@ -1,0 +1,3 @@
+FPGA_CLK_clk_wiz.v,verilog,xil_defaultlib,../../../ip/FPGA_CLK/FPGA_CLK_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+FPGA_CLK.v,verilog,xil_defaultlib,../../../ip/FPGA_CLK/FPGA_CLK.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

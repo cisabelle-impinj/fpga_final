@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="FPGA_CLK_synth_1" LaunchPart="xc7a100tcsg324-2" LaunchTime="1560046427">
+  <File Type="PA-TCL" Name="FPGA_CLK.tcl"/>
+  <File Type="REPORTS-TCL" Name="FPGA_CLK_reports.tcl"/>
+  <File Type="RDS-RDS" Name="FPGA_CLK.vds"/>
+  <File Type="RDS-UTIL" Name="FPGA_CLK_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FPGA_CLK_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FPGA_CLK.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FPGA_CLK">
+    <File Path="$PSRCDIR/sources_1/ip/FPGA_CLK/FPGA_CLK.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../IP/FPGA_CLK/FPGA_CLK.xci"/>
+        <Attr Name="ImportTime" Val="1536098524"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/FPGA_CLK.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../IP/FPGA_CLK.xcix"/>
+        <Attr Name="ImportTime" Val="1555911757"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="FPGA_CLK"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FPGA_CLK">
+    <File Path="$PSRCDIR/sources_1/ip/FPGA_CLK/FPGA_CLK.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../IP/FPGA_CLK/FPGA_CLK.xci"/>
+        <Attr Name="ImportTime" Val="1536098524"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/FPGA_CLK.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../IP/FPGA_CLK.xcix"/>
+        <Attr Name="ImportTime" Val="1555911757"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="FPGA_CLK"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

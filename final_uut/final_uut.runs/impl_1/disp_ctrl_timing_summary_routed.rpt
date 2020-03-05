@@ -1,0 +1,1574 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Jun  9 10:25:34 2019
+| Host         : AcerPowerBook running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file disp_ctrl_timing_summary_routed.rpt -pb disp_ctrl_timing_summary_routed.pb -rpx disp_ctrl_timing_summary_routed.rpx -warn_on_violation
+| Design       : disp_ctrl
+| Device       : 7a100t-csg324
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 31 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     14.001        0.000                      0                  134        0.197        0.000                      0                  134        3.000        0.000                       0                   117  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                ------------       ----------      --------------
+MCLK                 {0.000 5.000}      10.000          100.000         
+  clk_out1_FPGA_CLK  {0.000 10.000}     20.000          50.000          
+  clkfbout_FPGA_CLK  {0.000 5.000}      10.000          100.000         
+virtual_clock        {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+MCLK                                                                                                                                                                   3.000        0.000                       0                     1  
+  clk_out1_FPGA_CLK       14.001        0.000                      0                  134        0.197        0.000                      0                  134        9.500        0.000                       0                   113  
+  clkfbout_FPGA_CLK                                                                                                                                                    8.408        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  MCLK
+  To Clock:  MCLK
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         MCLK
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { MCLK }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_FPGA_CLK
+  To Clock:  clk_out1_FPGA_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack       14.001ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.197ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             14.001ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[1]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.738ns  (logic 1.134ns (19.762%)  route 4.604ns (80.238%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.558     5.235    AN[7]_i_1_n_0
+    SLICE_X2Y78          FDPE                                         r  AN_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X2Y78          FDPE                                         r  AN_reg[1]/C
+                         clock pessimism              0.401    19.455    
+                         clock uncertainty           -0.084    19.372    
+    SLICE_X2Y78          FDPE (Setup_fdpe_C_CE)      -0.136    19.236    AN_reg[1]
+  -------------------------------------------------------------------
+                         required time                         19.236    
+                         arrival time                          -5.235    
+  -------------------------------------------------------------------
+                         slack                                 14.001    
+
+Slack (MET) :             14.001ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[3]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.738ns  (logic 1.134ns (19.762%)  route 4.604ns (80.238%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.558     5.235    AN[7]_i_1_n_0
+    SLICE_X2Y78          FDPE                                         r  AN_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X2Y78          FDPE                                         r  AN_reg[3]/C
+                         clock pessimism              0.401    19.455    
+                         clock uncertainty           -0.084    19.372    
+    SLICE_X2Y78          FDPE (Setup_fdpe_C_CE)      -0.136    19.236    AN_reg[3]
+  -------------------------------------------------------------------
+                         required time                         19.236    
+                         arrival time                          -5.235    
+  -------------------------------------------------------------------
+                         slack                                 14.001    
+
+Slack (MET) :             14.001ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[4]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.738ns  (logic 1.134ns (19.762%)  route 4.604ns (80.238%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.558     5.235    AN[7]_i_1_n_0
+    SLICE_X2Y78          FDPE                                         r  AN_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X2Y78          FDPE                                         r  AN_reg[4]/C
+                         clock pessimism              0.401    19.455    
+                         clock uncertainty           -0.084    19.372    
+    SLICE_X2Y78          FDPE (Setup_fdpe_C_CE)      -0.136    19.236    AN_reg[4]
+  -------------------------------------------------------------------
+                         required time                         19.236    
+                         arrival time                          -5.235    
+  -------------------------------------------------------------------
+                         slack                                 14.001    
+
+Slack (MET) :             14.001ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[6]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.738ns  (logic 1.134ns (19.762%)  route 4.604ns (80.238%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.558     5.235    AN[7]_i_1_n_0
+    SLICE_X2Y78          FDPE                                         r  AN_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X2Y78          FDPE                                         r  AN_reg[6]/C
+                         clock pessimism              0.401    19.455    
+                         clock uncertainty           -0.084    19.372    
+    SLICE_X2Y78          FDPE (Setup_fdpe_C_CE)      -0.136    19.236    AN_reg[6]
+  -------------------------------------------------------------------
+                         required time                         19.236    
+                         arrival time                          -5.235    
+  -------------------------------------------------------------------
+                         slack                                 14.001    
+
+Slack (MET) :             14.084ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[2]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.640ns  (logic 1.134ns (20.105%)  route 4.506ns (79.895%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.418ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.460     5.137    AN[7]_i_1_n_0
+    SLICE_X0Y72          FDPE                                         r  AN_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X0Y72          FDPE                                         r  AN_reg[2]/C
+                         clock pessimism              0.418    19.472    
+                         clock uncertainty           -0.084    19.389    
+    SLICE_X0Y72          FDPE (Setup_fdpe_C_CE)      -0.168    19.221    AN_reg[2]
+  -------------------------------------------------------------------
+                         required time                         19.221    
+                         arrival time                          -5.137    
+  -------------------------------------------------------------------
+                         slack                                 14.084    
+
+Slack (MET) :             14.084ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[5]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.640ns  (logic 1.134ns (20.105%)  route 4.506ns (79.895%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.418ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.460     5.137    AN[7]_i_1_n_0
+    SLICE_X0Y72          FDPE                                         r  AN_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X0Y72          FDPE                                         r  AN_reg[5]/C
+                         clock pessimism              0.418    19.472    
+                         clock uncertainty           -0.084    19.389    
+    SLICE_X0Y72          FDPE (Setup_fdpe_C_CE)      -0.168    19.221    AN_reg[5]
+  -------------------------------------------------------------------
+                         required time                         19.221    
+                         arrival time                          -5.137    
+  -------------------------------------------------------------------
+                         slack                                 14.084    
+
+Slack (MET) :             14.084ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            AN_reg[7]/CE
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.640ns  (logic 1.134ns (20.105%)  route 4.506ns (79.895%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.418ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.460     5.137    AN[7]_i_1_n_0
+    SLICE_X0Y72          FDPE                                         r  AN_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X0Y72          FDPE                                         r  AN_reg[7]/C
+                         clock pessimism              0.418    19.472    
+                         clock uncertainty           -0.084    19.389    
+    SLICE_X0Y72          FDPE (Setup_fdpe_C_CE)      -0.168    19.221    AN_reg[7]
+  -------------------------------------------------------------------
+                         required time                         19.221    
+                         arrival time                          -5.137    
+  -------------------------------------------------------------------
+                         slack                                 14.084    
+
+Slack (MET) :             14.090ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            dig_data_tmp_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.617ns  (logic 1.134ns (20.188%)  route 4.483ns (79.812%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.041ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.946ns = ( 19.054 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.437     5.114    AN[7]_i_1_n_0
+    SLICE_X0Y77          FDCE                                         r  dig_data_tmp_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.337    19.054    clk100
+    SLICE_X0Y77          FDCE                                         r  dig_data_tmp_reg[0]/C
+                         clock pessimism              0.401    19.455    
+                         clock uncertainty           -0.084    19.372    
+    SLICE_X0Y77          FDCE (Setup_fdce_C_CE)      -0.168    19.204    dig_data_tmp_reg[0]
+  -------------------------------------------------------------------
+                         required time                         19.204    
+                         arrival time                          -5.114    
+  -------------------------------------------------------------------
+                         slack                                 14.090    
+
+Slack (MET) :             14.107ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            dig_data_tmp_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.598ns  (logic 1.134ns (20.258%)  route 4.464ns (79.742%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.948ns = ( 19.052 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.418     5.094    AN[7]_i_1_n_0
+    SLICE_X0Y76          FDCE                                         r  dig_data_tmp_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.335    19.052    clk100
+    SLICE_X0Y76          FDCE                                         r  dig_data_tmp_reg[1]/C
+                         clock pessimism              0.401    19.453    
+                         clock uncertainty           -0.084    19.370    
+    SLICE_X0Y76          FDCE (Setup_fdce_C_CE)      -0.168    19.202    dig_data_tmp_reg[1]
+  -------------------------------------------------------------------
+                         required time                         19.202    
+                         arrival time                          -5.094    
+  -------------------------------------------------------------------
+                         slack                                 14.107    
+
+Slack (MET) :             14.126ns  (required time - arrival time)
+  Source:                 clkdiv_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            dig_data_tmp_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_FPGA_CLK rise@20.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        5.579ns  (logic 1.134ns (20.325%)  route 4.445ns (79.675%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.948ns = ( 19.052 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.504ns
+    Clock Pessimism Removal (CPR):    0.401ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.413     1.413 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.478    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.956    -3.478 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.449    -2.029    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081    -1.948 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.445    -0.504    clk100
+    SLICE_X2Y72          FDCE                                         r  clkdiv_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y72          FDCE (Prop_fdce_C_Q)         0.433    -0.071 f  clkdiv_reg[14]/Q
+                         net (fo=17, routed)          1.239     1.169    clkdiv_reg_n_0_[14]
+    SLICE_X7Y74          LUT3 (Prop_lut3_I2_O)        0.119     1.288 f  AN[7]_i_17/O
+                         net (fo=1, routed)           0.516     1.804    AN[7]_i_17_n_0
+    SLICE_X7Y73          LUT6 (Prop_lut6_I4_O)        0.267     2.071 f  AN[7]_i_5/O
+                         net (fo=2, routed)           0.920     2.991    AN[7]_i_5_n_0
+    SLICE_X4Y73          LUT5 (Prop_lut5_I0_O)        0.105     3.096 f  AN[1]_i_1/O
+                         net (fo=3, routed)           1.103     4.199    AN[1]_i_1_n_0
+    SLICE_X0Y74          LUT6 (Prop_lut6_I0_O)        0.105     4.304 r  AN[0]_i_1/O
+                         net (fo=2, routed)           0.268     4.572    AN[0]_i_1_n_0
+    SLICE_X1Y74          LUT4 (Prop_lut4_I0_O)        0.105     4.677 r  AN[7]_i_1/O
+                         net (fo=13, routed)          0.399     5.076    AN[7]_i_1_n_0
+    SLICE_X1Y76          FDCE                                         r  dig_data_tmp_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  MCLK (IN)
+                         net (fo=0)                   0.000    20.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         1.347    21.347 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    22.351    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.092    16.259 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.381    17.640    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    17.717 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         1.335    19.052    clk100
+    SLICE_X1Y76          FDCE                                         r  dig_data_tmp_reg[2]/C
+                         clock pessimism              0.401    19.453    
+                         clock uncertainty           -0.084    19.370    
+    SLICE_X1Y76          FDCE (Setup_fdce_C_CE)      -0.168    19.202    dig_data_tmp_reg[2]
+  -------------------------------------------------------------------
+                         required time                         19.202    
+                         arrival time                          -5.076    
+  -------------------------------------------------------------------
+                         slack                                 14.126    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.197ns  (arrival time - required time)
+  Source:                 ssg_cfg_reg1_reg[0]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            dig_data_tmp_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.301ns  (logic 0.186ns (61.785%)  route 0.115ns (38.215%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.809ns
+    Source Clock Delay      (SCD):    -0.570ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.594    -0.570    clk100
+    SLICE_X0Y78          FDPE                                         r  ssg_cfg_reg1_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y78          FDPE (Prop_fdpe_C_Q)         0.141    -0.429 r  ssg_cfg_reg1_reg[0]/Q
+                         net (fo=1, routed)           0.115    -0.314    ssg_cfg_reg1[0]
+    SLICE_X0Y77          LUT6 (Prop_lut6_I4_O)        0.045    -0.269 r  dig_data_tmp[0]_i_1/O
+                         net (fo=1, routed)           0.000    -0.269    dig_data_tmp[0]_i_1_n_0
+    SLICE_X0Y77          FDCE                                         r  dig_data_tmp_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.864    -0.809    clk100
+    SLICE_X0Y77          FDCE                                         r  dig_data_tmp_reg[0]/C
+                         clock pessimism              0.252    -0.557    
+    SLICE_X0Y77          FDCE (Hold_fdce_C_D)         0.091    -0.466    dig_data_tmp_reg[0]
+  -------------------------------------------------------------------
+                         required time                          0.466    
+                         arrival time                          -0.269    
+  -------------------------------------------------------------------
+                         slack                                  0.197    
+
+Slack (MET) :             0.206ns  (arrival time - required time)
+  Source:                 btncn_t_minus_one_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            btndn_latch_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.227ns (76.161%)  route 0.071ns (23.839%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.807ns
+    Source Clock Delay      (SCD):    -0.569ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.595    -0.569    clk100
+    SLICE_X0Y79          FDCE                                         r  btncn_t_minus_one_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y79          FDCE (Prop_fdce_C_Q)         0.128    -0.441 r  btncn_t_minus_one_reg/Q
+                         net (fo=2, routed)           0.071    -0.370    btncn_t_minus_one
+    SLICE_X0Y79          LUT5 (Prop_lut5_I2_O)        0.099    -0.271 r  btndn_latch_i_1/O
+                         net (fo=1, routed)           0.000    -0.271    btndn_latch_i_1_n_0
+    SLICE_X0Y79          FDCE                                         r  btndn_latch_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.866    -0.807    clk100
+    SLICE_X0Y79          FDCE                                         r  btndn_latch_reg/C
+                         clock pessimism              0.238    -0.569    
+    SLICE_X0Y79          FDCE (Hold_fdce_C_D)         0.092    -0.477    btndn_latch_reg
+  -------------------------------------------------------------------
+                         required time                          0.477    
+                         arrival time                          -0.271    
+  -------------------------------------------------------------------
+                         slack                                  0.206    
+
+Slack (MET) :             0.207ns  (arrival time - required time)
+  Source:                 btncn_t_minus_one_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            btncn_latch_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.227ns (76.208%)  route 0.071ns (23.792%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.807ns
+    Source Clock Delay      (SCD):    -0.569ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.595    -0.569    clk100
+    SLICE_X0Y79          FDCE                                         r  btncn_t_minus_one_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y79          FDCE (Prop_fdce_C_Q)         0.128    -0.441 f  btncn_t_minus_one_reg/Q
+                         net (fo=2, routed)           0.071    -0.370    btncn_t_minus_one
+    SLICE_X0Y79          LUT5 (Prop_lut5_I2_O)        0.099    -0.271 r  btncn_latch_i_1/O
+                         net (fo=1, routed)           0.000    -0.271    btncn_latch_i_1_n_0
+    SLICE_X0Y79          FDCE                                         r  btncn_latch_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.866    -0.807    clk100
+    SLICE_X0Y79          FDCE                                         r  btncn_latch_reg/C
+                         clock pessimism              0.238    -0.569    
+    SLICE_X0Y79          FDCE (Hold_fdce_C_D)         0.091    -0.478    btncn_latch_reg
+  -------------------------------------------------------------------
+                         required time                          0.478    
+                         arrival time                          -0.271    
+  -------------------------------------------------------------------
+                         slack                                  0.207    
+
+Slack (MET) :             0.210ns  (arrival time - required time)
+  Source:                 led_cfg_reg_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            led_cfg_reg_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.316ns  (logic 0.186ns (58.942%)  route 0.130ns (41.058%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.802ns
+    Source Clock Delay      (SCD):    -0.565ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.599    -0.565    clk100
+    SLICE_X0Y66          FDCE                                         r  led_cfg_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y66          FDCE (Prop_fdce_C_Q)         0.141    -0.424 r  led_cfg_reg_reg[4]/Q
+                         net (fo=4, routed)           0.130    -0.295    LED_OBUF[4]
+    SLICE_X1Y65          LUT6 (Prop_lut6_I3_O)        0.045    -0.250 r  led_cfg_reg[5]_i_1/O
+                         net (fo=1, routed)           0.000    -0.250    p_2_in[5]
+    SLICE_X1Y65          FDCE                                         r  led_cfg_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.871    -0.802    clk100
+    SLICE_X1Y65          FDCE                                         r  led_cfg_reg_reg[5]/C
+                         clock pessimism              0.252    -0.550    
+    SLICE_X1Y65          FDCE (Hold_fdce_C_D)         0.091    -0.459    led_cfg_reg_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.459    
+                         arrival time                          -0.250    
+  -------------------------------------------------------------------
+                         slack                                  0.210    
+
+Slack (MET) :             0.236ns  (arrival time - required time)
+  Source:                 clkdiv2_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            clkdiv2_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.341ns  (logic 0.265ns (77.674%)  route 0.076ns (22.326%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.803ns
+    Source Clock Delay      (SCD):    -0.565ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.599    -0.565    clk100
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y66          FDCE (Prop_fdce_C_Q)         0.141    -0.424 r  clkdiv2_reg[0]/Q
+                         net (fo=3, routed)           0.076    -0.348    clkdiv2_reg[0]
+    SLICE_X1Y66          CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.124    -0.224 r  clkdiv2_reg[0]_i_1/O[1]
+                         net (fo=1, routed)           0.000    -0.224    clkdiv2_reg[0]_i_1_n_6
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.870    -0.803    clk100
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[1]/C
+                         clock pessimism              0.238    -0.565    
+    SLICE_X1Y66          FDCE (Hold_fdce_C_D)         0.105    -0.460    clkdiv2_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.460    
+                         arrival time                          -0.224    
+  -------------------------------------------------------------------
+                         slack                                  0.236    
+
+Slack (MET) :             0.242ns  (arrival time - required time)
+  Source:                 led_cfg_reg_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            led_cfg_reg_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.346ns  (logic 0.209ns (60.465%)  route 0.137ns (39.535%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.803ns
+    Source Clock Delay      (SCD):    -0.564ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.600    -0.564    clk100
+    SLICE_X2Y65          FDCE                                         r  led_cfg_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y65          FDCE (Prop_fdce_C_Q)         0.164    -0.400 r  led_cfg_reg_reg[1]/Q
+                         net (fo=4, routed)           0.137    -0.264    LED_OBUF[1]
+    SLICE_X0Y66          LUT6 (Prop_lut6_I3_O)        0.045    -0.219 r  led_cfg_reg[2]_i_1/O
+                         net (fo=1, routed)           0.000    -0.219    p_2_in[2]
+    SLICE_X0Y66          FDCE                                         r  led_cfg_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.870    -0.803    clk100
+    SLICE_X0Y66          FDCE                                         r  led_cfg_reg_reg[2]/C
+                         clock pessimism              0.252    -0.551    
+    SLICE_X0Y66          FDCE (Hold_fdce_C_D)         0.091    -0.460    led_cfg_reg_reg[2]
+  -------------------------------------------------------------------
+                         required time                          0.460    
+                         arrival time                          -0.219    
+  -------------------------------------------------------------------
+                         slack                                  0.242    
+
+Slack (MET) :             0.258ns  (arrival time - required time)
+  Source:                 ssg_cfg_reg2_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            dig_data_tmp_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.360ns  (logic 0.186ns (51.659%)  route 0.174ns (48.341%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.811ns
+    Source Clock Delay      (SCD):    -0.570ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.594    -0.570    clk100
+    SLICE_X0Y78          FDCE                                         r  ssg_cfg_reg2_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y78          FDCE (Prop_fdce_C_Q)         0.141    -0.429 r  ssg_cfg_reg2_reg[1]/Q
+                         net (fo=2, routed)           0.174    -0.255    ssg_cfg_reg2_reg_n_0_[1]
+    SLICE_X0Y76          LUT6 (Prop_lut6_I2_O)        0.045    -0.210 r  dig_data_tmp[1]_i_1/O
+                         net (fo=1, routed)           0.000    -0.210    dig_data_tmp[1]_i_1_n_0
+    SLICE_X0Y76          FDCE                                         r  dig_data_tmp_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.862    -0.811    clk100
+    SLICE_X0Y76          FDCE                                         r  dig_data_tmp_reg[1]/C
+                         clock pessimism              0.252    -0.559    
+    SLICE_X0Y76          FDCE (Hold_fdce_C_D)         0.091    -0.468    dig_data_tmp_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.468    
+                         arrival time                          -0.210    
+  -------------------------------------------------------------------
+                         slack                                  0.258    
+
+Slack (MET) :             0.259ns  (arrival time - required time)
+  Source:                 clkdiv2_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            clkdiv2_reg[31]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.364ns  (logic 0.249ns (68.316%)  route 0.115ns (31.684%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.811ns
+    Source Clock Delay      (SCD):    -0.572ns
+    Clock Pessimism Removal (CPR):    -0.239ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.592    -0.572    clk100
+    SLICE_X1Y73          FDCE                                         r  clkdiv2_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y73          FDCE (Prop_fdce_C_Q)         0.141    -0.431 r  clkdiv2_reg[31]/Q
+                         net (fo=2, routed)           0.115    -0.316    clkdiv2_reg[31]
+    SLICE_X1Y73          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108    -0.208 r  clkdiv2_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000    -0.208    clkdiv2_reg[28]_i_1_n_4
+    SLICE_X1Y73          FDCE                                         r  clkdiv2_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.862    -0.811    clk100
+    SLICE_X1Y73          FDCE                                         r  clkdiv2_reg[31]/C
+                         clock pessimism              0.239    -0.572    
+    SLICE_X1Y73          FDCE (Hold_fdce_C_D)         0.105    -0.467    clkdiv2_reg[31]
+  -------------------------------------------------------------------
+                         required time                          0.467    
+                         arrival time                          -0.208    
+  -------------------------------------------------------------------
+                         slack                                  0.259    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 clkdiv2_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            clkdiv2_reg[27]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.366ns  (logic 0.249ns (68.030%)  route 0.117ns (31.970%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.809ns
+    Source Clock Delay      (SCD):    -0.570ns
+    Clock Pessimism Removal (CPR):    -0.239ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.594    -0.570    clk100
+    SLICE_X1Y72          FDCE                                         r  clkdiv2_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y72          FDCE (Prop_fdce_C_Q)         0.141    -0.429 r  clkdiv2_reg[27]/Q
+                         net (fo=2, routed)           0.117    -0.312    clkdiv2_reg[27]
+    SLICE_X1Y72          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108    -0.204 r  clkdiv2_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000    -0.204    clkdiv2_reg[24]_i_1_n_4
+    SLICE_X1Y72          FDCE                                         r  clkdiv2_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.864    -0.809    clk100
+    SLICE_X1Y72          FDCE                                         r  clkdiv2_reg[27]/C
+                         clock pessimism              0.239    -0.570    
+    SLICE_X1Y72          FDCE (Hold_fdce_C_D)         0.105    -0.465    clkdiv2_reg[27]
+  -------------------------------------------------------------------
+                         required time                          0.465    
+                         arrival time                          -0.204    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 clkdiv2_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            clkdiv2_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_FPGA_CLK  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_FPGA_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_FPGA_CLK rise@0.000ns - clk_out1_FPGA_CLK rise@0.000ns)
+  Data Path Delay:        0.366ns  (logic 0.249ns (68.030%)  route 0.117ns (31.970%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.803ns
+    Source Clock Delay      (SCD):    -0.565ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.690    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.379    -1.689 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.499    -1.190    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.164 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.599    -0.565    clk100
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y66          FDCE (Prop_fdce_C_Q)         0.141    -0.424 r  clkdiv2_reg[3]/Q
+                         net (fo=2, routed)           0.117    -0.307    clkdiv2_reg[3]
+    SLICE_X1Y66          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108    -0.199 r  clkdiv2_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000    -0.199    clkdiv2_reg[0]_i_1_n_4
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_FPGA_CLK rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  MCLK (IN)
+                         net (fo=0)                   0.000     0.000    u_clocks/u_fpga_clk/inst/clk_in1
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  u_clocks/u_fpga_clk/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.918    u_clocks/u_fpga_clk/inst/clk_in1_FPGA_CLK
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.163    -2.245 r  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.544    -1.702    u_clocks/u_fpga_clk/inst/clk_out1_FPGA_CLK
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.673 r  u_clocks/u_fpga_clk/inst/clkout1_buf/O
+                         net (fo=111, routed)         0.870    -0.803    clk100
+    SLICE_X1Y66          FDCE                                         r  clkdiv2_reg[3]/C
+                         clock pessimism              0.238    -0.565    
+    SLICE_X1Y66          FDCE (Hold_fdce_C_D)         0.105    -0.460    clkdiv2_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.460    
+                         arrival time                          -0.199    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_FPGA_CLK
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            1.592         20.000      18.408     BUFGCTRL_X0Y16   u_clocks/u_fpga_clk/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         20.000      18.751     MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X0Y72      AN_reg[2]/C
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X2Y78      AN_reg[3]/C
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X2Y78      AN_reg[4]/C
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X0Y72      AN_reg[5]/C
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X2Y78      AN_reg[6]/C
+Min Period        n/a     FDPE/C              n/a            1.000         20.000      19.000     SLICE_X0Y72      AN_reg[7]/C
+Min Period        n/a     FDCE/C              n/a            1.000         20.000      19.000     SLICE_X0Y79      btncn_latch_reg/C
+Min Period        n/a     FDCE/C              n/a            1.000         20.000      19.000     SLICE_X1Y66      clkdiv2_reg[0]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       20.000      193.360    MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X0Y72      AN_reg[2]/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X2Y78      AN_reg[3]/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X2Y78      AN_reg[4]/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X0Y72      AN_reg[5]/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X2Y78      AN_reg[6]/C
+Low Pulse Width   Slow    FDPE/C              n/a            0.500         10.000      9.500      SLICE_X0Y72      AN_reg[7]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X0Y79      btncn_latch_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X0Y79      btncn_latch_reg/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y68      clkdiv2_reg[10]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y68      clkdiv2_reg[11]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y66      clkdiv2_reg[0]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y66      clkdiv2_reg[1]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y73      clkdiv2_reg[28]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y73      clkdiv2_reg[29]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y66      clkdiv2_reg[2]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y73      clkdiv2_reg[30]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y73      clkdiv2_reg[31]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y66      clkdiv2_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y67      clkdiv2_reg[4]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X1Y67      clkdiv2_reg[5]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_FPGA_CLK
+  To Clock:  clkfbout_FPGA_CLK
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        8.408ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_FPGA_CLK
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            1.592         10.000      8.408      BUFGCTRL_X0Y17   u_clocks/u_fpga_clk/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       10.000      203.360    MMCME2_ADV_X1Y2  u_clocks/u_fpga_clk/inst/mmcm_adv_inst/CLKFBOUT
+
+
+

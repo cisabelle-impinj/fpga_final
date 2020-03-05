@@ -1,0 +1,387 @@
+
+*** Running vivado
+    with args -log disp_ctrl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source disp_ctrl.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source disp_ctrl.tcl -notrace
+Command: synth_design -top disp_ctrl -part xc7a100tcsg324-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23652 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 387.555 ; gain = 97.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'disp_ctrl' [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/disp_ctrl.vhd:40]
+INFO: [Synth 8-3491] module 'clocks' declared at 'G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:24' bound to instance 'u_clocks' of component 'clocks' [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/disp_ctrl.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'clocks' [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:34]
+INFO: [Synth 8-3491] module 'FPGA_CLK' declared at 'G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/realtime/FPGA_CLK_stub.vhdl:5' bound to instance 'u_fpga_clk' of component 'fpga_clk' [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'FPGA_CLK' [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/realtime/FPGA_CLK_stub.vhdl:16]
+INFO: [Synth 8-256] done synthesizing module 'clocks' (1#1) [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'disp_ctrl' (2#1) [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/disp_ctrl.vhd:40]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 442.867 ; gain = 152.457
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 442.867 ; gain = 152.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 442.867 ; gain = 152.457
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/FPGA_CLK/FPGA_CLK/FPGA_CLK_in_context.xdc] for cell 'u_clocks/u_fpga_clk'
+Finished Parsing XDC File [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/FPGA_CLK/FPGA_CLK/FPGA_CLK_in_context.xdc] for cell 'u_clocks/u_fpga_clk'
+Parsing XDC File [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/constrs_1/imports/source/disp_ctrl.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_clock' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/constrs_1/imports/source/disp_ctrl.xdc:9]
+Finished Parsing XDC File [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/constrs_1/imports/source/disp_ctrl.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/constrs_1/imports/source/disp_ctrl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/disp_ctrl_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/disp_ctrl_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 797.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for MCLK. (constraint file  G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/FPGA_CLK/FPGA_CLK/FPGA_CLK_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MCLK. (constraint file  G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/.Xil/Vivado-30288-AcerPowerBook/FPGA_CLK/FPGA_CLK/FPGA_CLK_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for u_clocks/u_fpga_clk. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "cke_50m_i" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg4" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg7" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg5" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg6" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ssg_cfg_reg8" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
++---Registers : 
+	               31 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 9     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module disp_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 9     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module clocks 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element u_clocks/clk_count_reg was removed.  [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element u_clocks/cke_50m_i_reg was removed.  [G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/imports/rtl_src/clocks.vhd:60]
+WARNING: [Synth 8-3917] design disp_ctrl has port SSG[7] driven by constant 1
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg8_reg[4]' (FDP) to 'ssg_cfg_reg8_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg7_reg[4]' (FDP) to 'ssg_cfg_reg7_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg6_reg[4]' (FDP) to 'ssg_cfg_reg6_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssg_cfg_reg2_reg[4] )
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg8_reg[3]' (FDP) to 'ssg_cfg_reg8_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg7_reg[3]' (FDP) to 'ssg_cfg_reg7_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg6_reg[3]' (FDP) to 'ssg_cfg_reg8_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg5_reg[3]' (FDP) to 'ssg_cfg_reg5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg4_reg[3]' (FDP) to 'ssg_cfg_reg4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg3_reg[3]' (FDC) to 'ssg_cfg_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg2_reg[3]' (FDP) to 'ssg_cfg_reg2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg1_reg[3]' (FDC) to 'ssg_cfg_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg7_reg[2]' (FDP) to 'ssg_cfg_reg7_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg6_reg[2]' (FDP) to 'ssg_cfg_reg6_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg5_reg[2]' (FDP) to 'ssg_cfg_reg5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg3_reg[2]' (FDC) to 'ssg_cfg_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg1_reg[2]' (FDC) to 'ssg_cfg_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg8_reg[1]' (FDP) to 'ssg_cfg_reg8_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg6_reg[1]' (FDP) to 'ssg_cfg_reg6_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg4_reg[1]' (FDP) to 'ssg_cfg_reg8_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg3_reg[1]' (FDP) to 'ssg_cfg_reg8_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg1_reg[1]' (FDC) to 'ssg_cfg_reg3_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg8_reg[0]' (FDP) to 'ssg_cfg_reg7_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ssg_cfg_reg7_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (ssg_cfg_reg2_reg[4]) is unused and will be removed from module disp_ctrl.
+WARNING: [Synth 8-3332] Sequential element (ssg_cfg_reg7_reg[0]) is unused and will be removed from module disp_ctrl.
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg3_reg[4]' (FDP) to 'ssg_cfg_reg1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg8_reg[2]' (FDP) to 'ssg_cfg_reg2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg2_reg[2]' (FDP) to 'ssg_cfg_reg6_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg5_reg[0]' (FDP) to 'ssg_cfg_reg2_reg[0]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|disp_ctrl   | SSG00      | 32x7          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'u_clocks/u_fpga_clk/clk_out1' to pin 'u_clocks/u_fpga_clk/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'u_clocks/u_fpga_clk/clk_out2' to pin 'u_clocks/u_fpga_clk/bbstub_clk_out2/O'
+WARNING: [Synth 8-565] redefining clock 'MCLK'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 797.969 ; gain = 507.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 806.289 ; gain = 515.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg4_reg[4]' (FDC) to 'ssg_cfg_reg2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ssg_cfg_reg7_reg[1]' (FDP) to 'ssg_cfg_reg6_reg[0]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |FPGA_CLK      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |FPGA_CLK_bbox_0 |     1|
+|2     |CARRY4          |    16|
+|3     |LUT1            |     1|
+|4     |LUT2            |    45|
+|5     |LUT3            |    11|
+|6     |LUT4            |    29|
+|7     |LUT5            |    46|
+|8     |LUT6            |    63|
+|9     |FDCE            |    93|
+|10    |FDPE            |    16|
+|11    |FDRE            |     2|
+|12    |IBUF            |     5|
+|13    |OBUF            |    32|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-----------+-------+------+
+|      |Instance   |Module |Cells |
++------+-----------+-------+------+
+|1     |top        |       |   362|
+|2     |  u_clocks |clocks |     4|
++------+-----------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 808.875 ; gain = 163.363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 808.875 ; gain = 518.465
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 808.875 ; gain = 529.938
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/synth_1/disp_ctrl.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file disp_ctrl_utilization_synth.rpt -pb disp_ctrl_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 808.875 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  9 10:22:04 2019...

@@ -1,0 +1,42 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Jun  9 10:25:33 2019
+| Host         : AcerPowerBook running 64-bit major release  (build 9200)
+| Command      : report_methodology -file disp_ctrl_methodology_drc_routed.rpt -pb disp_ctrl_methodology_drc_routed.pb -rpx disp_ctrl_methodology_drc_routed.rpx
+| Design       : disp_ctrl
+| Device       : xc7a100tcsg324-2
+| Speed File   : -2
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++--------+----------+--------------------------------------------------------+------------+
+| Rule   | Severity | Description                                            | Violations |
++--------+----------+--------------------------------------------------------+------------+
+| XDCC-1 | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
++--------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name MCLK -waveform {0.000 5.000} -add [get_ports MCLK] (Source: G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/constrs_1/imports/source/disp_ctrl.xdc (Line: 8))
+Previous: create_clock -period 10.000 [get_ports MCLK] (Source: g:/ucsdExtension/Fgpa1/final/final_uut/final_uut.srcs/sources_1/ip/FPGA_CLK/FPGA_CLK.xdc (Line: 56))
+Related violations: <none>
+
+

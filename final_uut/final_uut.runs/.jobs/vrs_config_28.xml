@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="FPGA_CLK_synth_1" LaunchDir="G:/ucsdExtension/Fgpa1/final/final_uut/final_uut.runs/FPGA_CLK_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
